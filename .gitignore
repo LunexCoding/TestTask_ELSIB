@@ -1,0 +1,28 @@
+.vscode/
+.vs/
+*.user
+*.suo
+*.csproj.user
+*.sln.docstates
+*.sln.cache
+*.sln.ide
+*.rsuser
+
+# Артефакты сборки
+bin/
+obj/
+out/
+
+# Папки проекта Visual Studio
+*.vcxproj.user
+*.vcxproj.filters
+*.vcxproj.ruleset
+*.vcxproj.dotCover
+*.vcxproj.dotSettings
+
+# Файлы настроек
+*.DotSettings
+*.dotCover
+*.userprefs
+*.coverage
+*.ncrunch

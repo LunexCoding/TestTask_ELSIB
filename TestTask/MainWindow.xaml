@@ -1,0 +1,25 @@
+﻿<Window x:Class="TestTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Просмотр материалов" Height="300" Width="400">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Content="Добавить" Command="{Binding AddMaterialCommand}" Margin="5"/>
+            <Button Content="Удалить" Command="{Binding DeleteMaterialCommand}" CommandParameter="{Binding SelectedMaterial}" Margin="5"/>
+            <Button Content="Выход" Command="{Binding ExitCommand}" Margin="5"/>
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding Materials}" 
+                  SelectedItem="{Binding SelectedMaterial}" 
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код" Binding="{Binding Code}" Width="*" />
+                <DataGridTextColumn Header="Наименование материала" Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
